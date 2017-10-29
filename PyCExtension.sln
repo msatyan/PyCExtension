@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PyCExtension", "PyCExtension\PyCExtension.pyproj", "{A88376B7-B798-451B-BC76-9C213016F9FE}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PyCExtension", "MyPyPkg1\MyPyPkg1.pyproj", "{A88376B7-B798-451B-BC76-9C213016F9FE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyCLib", "MyCLib\MyCLib.vcxproj", "{6F07AC6B-1647-4792-B8B8-39934CE50DB3}"
 EndProject
