@@ -19,7 +19,7 @@
 // #include <structmember.h>
 // #include "MyCLib1Src.h"
 // {
-#define INIT_MyCLib1Module                PyInit_MyCLib1Module
+#define INIT_MyCLib1  PyInit_MyCLib1
 // }
 
 
@@ -46,9 +46,9 @@ static PyObject *MyC_Add(PyObject *self, PyObject *args)
 
 static PyObject *MyC_Multiply(PyObject *self, PyObject *args)
 {
-    int rc = 0;
-    int a=0;
-    int b=0;
+    double rc = 0;
+    double a=0;
+    double b=0;
 
     // https://docs.python.org/3/c-api/arg.html
     // d (float) [double] Convert a Python floating point number to a C double.
@@ -95,7 +95,7 @@ static struct PyModuleDef moduledef =
 // https://docs.python.org/2/extending/newtypes.html
 // https://docs.python.org/3/extending/newtypes.html
 // Module initialization function  
-PyMODINIT_FUNC INIT_MyCLib1Module(void)
+PyMODINIT_FUNC INIT_MyCLib1(void)
 {
     PyObject* m=NULL;
 
