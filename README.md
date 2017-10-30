@@ -52,3 +52,30 @@ https://www.pydanny.com/cookie-project-templates-made-easy.html
 * [Travis CI](https://github.com/travis-ci/travis-ci)
 
 
+#### VS setting for the C proj (MyCLib1) to build native lib
+
+System Env
+```
+SET MY_PY_DIR=C:\Dev\Anaconda3
+```
+
+#### MyCLib1 project properties -> Configuration Properties
+General
+```
+1) Configuration Type : Dynamic Library (.dll)
+2) Appy Change by clicking the Apply button
+3) Target Extension change from .dll to .pyd
+```
+
+C/C++
+```bash
+# All Platforms
+Additional Include Directories : $(MY_PY_DIR)\include
+```
+
+Linker
+```bash
+# All Platforms
+Additional Library Directories : $(MY_PY_DIR)\libs
+```
+

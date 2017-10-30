@@ -25,30 +25,6 @@
 
 
 
-
-static PyMethodDef MyModuleMethods[] = 
-{
-    // pattern : PyMehodName, CFunction, FFunctionType, Doc
-    { "MyPyfunc1", MyCfunc1, METH_VARARGS, "My Awesome C Function" },
-    { NULL, NULL, 0, NULL }
-};
-
-
-// https://docs.python.org/2/extending/newtypes.html
-// https://docs.python.org/3/extending/newtypes.html
-PyMODINIT_FUNC initMyCExtnMod1(void)
-{
-    PyObject *m = Py_InitModule3( "MyCExtnMod1", MyModuleMethods, 
-        "This is a sample demo module  for Python extension by using C");
-
-    if (m == NULL)
-        return;
-}
-
-
-
-/////////////////////////////////////////////////////////////
-
 static PyObject *MyC_Add(PyObject *self, PyObject *args)
 {
     int rc = 0;
@@ -129,4 +105,6 @@ PyMODINIT_FUNC INIT_MyCLib1Module(void)
 #else
     m = PyModule_Create(&moduledef);
 #endif
+
+	return(m);
 }
