@@ -18,4 +18,5 @@ setup (name    = PACKAGE,
        version = VERSION,
        license = LICENSE,
        description = 'This is my MyCLib1 Extension',
+       author = 'Sathyanesh Krishnan',
        ext_modules = [module1])
