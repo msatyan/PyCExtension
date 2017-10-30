@@ -64,12 +64,63 @@ static PyObject *MyC_Multiply(PyObject *self, PyObject *args)
     return ret;
 }
 
+// We can use this for SPEED TEST between Py and C
+// Find the number of prime numbers between X and Y
+static PyObject *MyC_NumberOfPrimes(PyObject *self, PyObject *args)
+{
+	int i = 0;
+	int j = 0;
+	int x = 0;
+	int y = 0;
+	int VRange = 0;
+	int isPrime = 0;
+	int PrimeCount = 0;
+
+	
+	if (!PyArg_ParseTuple(args, "ii", &x, &y))
+	{
+		return NULL;
+	}
+
+	if (x < 2)
+		x = 2;
+
+	for (i = x; i <= y; i++)
+	{
+		isPrime = 1;
+
+		VRange = i / 2; //This Validation Range is good enough
+		for (j = 2; j <= VRange; j++)
+		{
+			// Check whether it is  divisible by any number other than 1 
+			if ( !(i%j) )
+			{
+				isPrime = 0;
+				break;
+			}
+		}
+
+		if (isPrime)
+		{
+			++PrimeCount;
+		}
+	}
+
+	PyObject *ret = Py_BuildValue("i", PrimeCount);
+	return ret;
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////
 
 static PyMethodDef MyCLib1_Methods[] = 
 {
     // pattern : PyMehodName, CFunction, FFunctionType, Doc
     { "Add", (PyCFunction)MyC_Add, METH_VARARGS, "My C function to Add Int values" },
     { "Multiply", (PyCFunction)MyC_Multiply, METH_VARARGS, "My C function to Multiply Decimals." },
+	{ "NumberOfPrimes", (PyCFunction)MyC_NumberOfPrimes, METH_VARARGS, "Find the number of prime numbers between X and Y" },
     
     // An end-of-listing sentinel:
     { NULL, NULL, 0, NULL }

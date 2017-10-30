@@ -1,8 +1,5 @@
 ## PyCExtension
-This is a sample Python package to demonstrate how to extent Python functionality by using C language routines. The Python provides flexibility, at the same time it is inherently slow. The C language extensions can act as a turbocharger for Python modules where it needs speed and efficiency.  
-
-The C extension interface is specific to **CPython**, and extension modules do not work on other Python implementations
-
+This is a sample Python package to demonstrate how to extent functionality of CPython by using C language routines. The Python provides flexibility, at the same time it is inherently slow. The C language extensions can act as a turbocharger for Python modules where it needs speed and efficiency.  
 
 
 ## Reference Links
@@ -16,6 +13,14 @@ Following source of information may help you to creat python native extension.
 * [python extensions and embedding Python in C++ Apps](https://www.youtube.com/watch?v=bJq1n4gQFfw)
 * [Writing Safe C Extensions - PyCon 2016](https://www.youtube.com/watch?v=Yq__HtUIH5Y)
 * [Writing a C Python extension in 2017 PyCon 2017](https://www.youtube.com/watch?v=phe1s6p38gk)
+
+#### Debug (so far all windows)
+* [Debugging Python and C++ together](https://docs.microsoft.com/en-us/visualstudio/python/debugging-mixed-mode)
+* [Installing Debugging Symbols for Python Interpreters](https://docs.microsoft.com/en-us/visualstudio/python/debugging-symbols-for-mixed-mode)
+* [Profiling Python Code](https://docs.microsoft.com/en-us/visualstudio/python/profiling)
+
+
+
 
 ### [Packaging and Distributing]
 * [Packaging and Distributing Projects](https://packaging.python.org/tutorials/distributing-packages/)
