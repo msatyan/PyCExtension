@@ -17,5 +17,5 @@ module1 = Extension('MyCLib1',
 setup (name    = PACKAGE, 
        version = VERSION,
        license = LICENSE,
-       description = 'This is my MyCLib1 package',
+       description = 'This is my MyCLib1 Extension',
        ext_modules = [module1])
