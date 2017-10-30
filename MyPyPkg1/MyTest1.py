@@ -1,3 +1,4 @@
+import datetime
 import MyCLib1 as myCextn1
 
 def Main():
@@ -13,11 +14,17 @@ def Main():
     rc2 = myCextn1.Multiply( a2, b2);
     print('Value of C After Multiply() is {:.6f} from C function'.format(rc2))
 
-    a = 1 
-    b = 20
-    rc3 = myCextn1.NumberOfPrimes( a, b);
-    print('number of prime numbers between {:d} and {:d} = {:d} '.format(a, b, rc3))
-    print('End');
+    x = 10000 
+    y = 1000000
+
+    s = datetime.datetime.now()
+    rc3 = myCextn1.NumberOfPrimes( x, y)
+    e = datetime.datetime.now()
+
+    delta = e - s
+    print('Number of prime numbers between {:d} and {:d} = {:d} '.format(x, y, rc3))
+    print( 'Time taken to calculate the prime count = {}'.format(delta))
+    print('Good By!');
 
 
 if __name__ == "__main__":
