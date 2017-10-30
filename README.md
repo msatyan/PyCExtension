@@ -1,5 +1,8 @@
 ## PyCExtension
-This is a sample Python package to demonstrate how to extent Python functionality by using C language routines. The Python provides flexibility, at the same time it is inherently slow. The C language extensions can act as a turbocharger for Python modules where it needs speed and efficiency.
+This is a sample Python package to demonstrate how to extent Python functionality by using C language routines. The Python provides flexibility, at the same time it is inherently slow. The C language extensions can act as a turbocharger for Python modules where it needs speed and efficiency.  
+
+The C extension interface is specific to **CPython**, and extension modules do not work on other Python implementations
+
 
 
 ## Reference Links
