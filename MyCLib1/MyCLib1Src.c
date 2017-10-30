@@ -77,6 +77,7 @@ static PyObject *MyC_NumberOfPrimes(PyObject *self, PyObject *args)
 	int PrimeCount = 0;
 
 	
+	//printf("\n");
 	if (!PyArg_ParseTuple(args, "ii", &x, &y))
 	{
 		return NULL;
@@ -85,12 +86,14 @@ static PyObject *MyC_NumberOfPrimes(PyObject *self, PyObject *args)
 	if (x < 2)
 		x = 2;
 
-	for (i = x; i <= y; i++)
+	++y;
+	for ( i=x; i<y; i++)
 	{
 		isPrime = 1;
 
 		VRange = i / 2; //This Validation Range is good enough
-		for (j = 2; j <= VRange; j++)
+		++VRange;
+		for (j=2; j<VRange; j++)
 		{
 			// Check whether it is  divisible by any number other than 1 
 			if ( !(i%j) )
@@ -102,6 +105,7 @@ static PyObject *MyC_NumberOfPrimes(PyObject *self, PyObject *args)
 
 		if (isPrime)
 		{
+			//printf(" [%d] ", i);
 			++PrimeCount;
 		}
 	}

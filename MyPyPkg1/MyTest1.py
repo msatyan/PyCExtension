@@ -13,8 +13,8 @@ def Main():
     rc2 = myCextn1.Multiply( a2, b2);
     print('Value of C After Multiply() is {:.6f} from C function'.format(rc2))
 
-    a = 2 
-    b = 1000000
+    a = 1 
+    b = 20
     rc3 = myCextn1.NumberOfPrimes( a, b);
     print('number of prime numbers between {:d} and {:d} = {:d} '.format(a, b, rc3))
     print('End');
