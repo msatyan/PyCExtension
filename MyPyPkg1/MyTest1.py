@@ -12,7 +12,7 @@ def PyPrimeCount(x, y):
     if x < 2:
         x = 2
     
-    y = y+1
+    y += 1
     i = x
     while ( i < y):
         isPrime = 1
@@ -22,16 +22,16 @@ def PyPrimeCount(x, y):
         VRange = VRange + 1
         while ( j < VRange ):
             if ( i%j == 0):
-                j = j+1
+                j += 1
                 isPrime = 0
                 break
-            j = j+1
+            j += 1
 
         if (isPrime):
             #print( ' [{:d}] '.format(i))
-            PrimeCount = PrimeCount + 1
+            PrimeCount += 1
 
-        i = i +1
+        i += 1
 
     return PrimeCount
 
@@ -95,11 +95,11 @@ else:
 #   ************* C Py Speed Test *************
 #     C: Please Wait, Running CPrimes()........
 #     Number of primes between 2 and 100000 = 9592
-#     C() Time taken = 0:00:00.562664
+#     C() Time taken = 0:00:00.578126
 
 #     Py: Please Wait, Running PyPrimes()........
 #     Number of primes between 2 and 100000 = 9592
-#     Py() Time taken = 0:00:23.202617
+#     Py() Time taken = 0:00:22.666514
 
 # Good By!
 
