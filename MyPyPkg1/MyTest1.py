@@ -19,7 +19,7 @@ def PyPrimeCount(x, y):
         VRange = i / 2 # This Validation Range is good enough
 
         j = 2
-        VRange = VRange + 1
+        VRange += 1
         while ( j < VRange ):
             if ( i%j == 0):
                 j += 1
