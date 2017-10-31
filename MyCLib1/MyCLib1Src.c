@@ -66,7 +66,7 @@ static PyObject *MyC_Multiply(PyObject *self, PyObject *args)
 
 // We can use this for SPEED TEST between Py and C
 // Find the number of prime numbers between X and Y
-static PyObject *MyC_NumberOfPrimes(PyObject *self, PyObject *args)
+static PyObject *MyCPrimeCount(PyObject *self, PyObject *args)
 {
 	int i = 0;
 	int j = 0;
@@ -124,7 +124,7 @@ static PyMethodDef MyCLib1_Methods[] =
     // pattern : PyMehodName, CFunction, FFunctionType, Doc
     { "Add", (PyCFunction)MyC_Add, METH_VARARGS, "My C function to Add Int values" },
     { "Multiply", (PyCFunction)MyC_Multiply, METH_VARARGS, "My C function to Multiply Decimals." },
-	{ "NumberOfPrimes", (PyCFunction)MyC_NumberOfPrimes, METH_VARARGS, "Find the number of prime numbers between X and Y" },
+	{ "CPrimeCount", (PyCFunction)MyCPrimeCount, METH_VARARGS, "Find the number of prime numbers between X and Y" },
     
     // An end-of-listing sentinel:
     { NULL, NULL, 0, NULL }
