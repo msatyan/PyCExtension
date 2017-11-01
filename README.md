@@ -8,6 +8,8 @@ This is a sample Python package to demonstrate how to extent functionality of CP
 ### Creating extension
 Following source of information may help you to creat python native extension.  
 * [Extending Python with C or C++](https://docs.python.org/3/extending/extending.html) 
+* [Building C and C++ Extensions](https://docs.python.org/3/extending/building.html#building)
+* [Distributing Python Modules](https://docs.python.org/3/distutils/index.html#distutils-index)
 * [VS Creating a C++ extension for Python](https://docs.microsoft.com/en-us/visualstudio/python/cpp-and-python) 
 * [YouTube: Extending Python with C](https://www.youtube.com/watch?v=CYDakDJv2p4)
 * [python extensions and embedding Python in C++ Apps](https://www.youtube.com/watch?v=bJq1n4gQFfw)

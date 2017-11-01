@@ -27,7 +27,7 @@
 
 static PyObject *MyC_Add(PyObject *self, PyObject *args)
 {
-    int rc = 0;
+    int rc=0;
     int a=0;
     int b=0;
 
@@ -46,7 +46,7 @@ static PyObject *MyC_Add(PyObject *self, PyObject *args)
 
 static PyObject *MyC_Multiply(PyObject *self, PyObject *args)
 {
-    double rc = 0;
+    double rc=0;
     double a=0;
     double b=0;
 
@@ -121,6 +121,14 @@ static PyObject *MyCPrimeCount(PyObject *self, PyObject *args)
 
 static PyMethodDef MyCLib1_Methods[] = 
 {
+    // The flag METH_VARARGS: will tell the interpreter the calling convention to be used for the C function
+    // When using only METH_VARARGS, the function should expect the Python-level parameters to be 
+    // passed in as a tuple acceptable for parsing via PyArg_ParseTuple()
+
+    // (METH_VARARGS |  METH_KEYWORDS) : In this case, the C function should accept a 
+    // third PyObject * parameter which will be a dictionary of keywords. 
+    // Use PyArg_ParseTupleAndKeywords() to parse the arguments to such a function.
+
     // pattern : PyMehodName, CFunction, FFunctionType, Doc
     { "Add", (PyCFunction)MyC_Add, METH_VARARGS, "My C function to Add Int values" },
     { "Multiply", (PyCFunction)MyC_Multiply, METH_VARARGS, "My C function to Multiply Decimals." },
@@ -141,7 +149,7 @@ static struct PyModuleDef moduledef =
     PyModuleDef_HEAD_INIT,
     MyCLib1_ModuleName,
     MyCLib1_Description,
-    -1,
+    -1, //size of per-interpreter state of the module, or -1 if the module keeps state in global variables
     MyCLib1_Methods,
 };
 #endif
@@ -152,10 +160,12 @@ static struct PyModuleDef moduledef =
 // Module initialization function  
 PyMODINIT_FUNC INIT_MyCLib1(void)
 {
+    // The initialization function must be named PyInit_<name>(), 
+    // where <name> is the name of the 'module', and should be the only 
+    // non-static item defined in the module file:
     PyObject* m=NULL;
 
 #if PY_MAJOR_VERSION < 3
-    // m = Py_InitModule3("IfxPy", IfxPy_Methods, "Informix Native Driver for Python.");
     m = Py_InitModule3(MyCLib1_ModuleName, MyCLib1_Methods, MyCLib1_Description);
 #else
     m = PyModule_Create(&moduledef);
