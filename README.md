@@ -1,6 +1,28 @@
 ## PyCExtension
 This is a sample Python package to demonstrate how to extent functionality of CPython by using C language routines. The Python provides flexibility, at the same time it is inherently slow. The C language extensions can act as a turbocharger for Python modules where it needs speed and efficiency.  
 
+##### build
+```bash
+cd PyCExtension/MyCLib1
+python setup.py build
+python setup.py install
+```
+
+##### Windows Installer Exe
+```bash
+cd PyCExtension/MyCLib1
+python setup.py bdist_wininst
+```
+
+#### Wheels
+```bash
+pip install wheel
+
+cd PyCExtension/MyCLib1
+python setup.py bdist_wheel
+```
+
+
 
 ## Reference Links
 ------------------
@@ -9,6 +31,8 @@ This is a sample Python package to demonstrate how to extent functionality of CP
 Following source of information may help you to creat python native extension.  
 * [Extending Python with C or C++](https://docs.python.org/3/extending/extending.html) 
 * [Building C and C++ Extensions](https://docs.python.org/3/extending/building.html#building)
+* [Packaging binary extensions](https://packaging.python.org/guides/packaging-binary-extensions/)
+* [Python Packaging User Guide](https://media.readthedocs.org/pdf/python-packaging-user-guide/latest/python-packaging-user-guide.pdf)
 * [Distributing Python Modules](https://docs.python.org/3/distutils/index.html#distutils-index)
 * [VS Creating a C++ extension for Python](https://docs.microsoft.com/en-us/visualstudio/python/cpp-and-python) 
 * [YouTube: Extending Python with C](https://www.youtube.com/watch?v=CYDakDJv2p4)
@@ -40,6 +64,7 @@ Following source of information may help you to creat python native extension.
 #### [Wheels](https://wheel.readthedocs.io/en/stable/)
  The wheel is a ZIP-format archive with a specially formatted filename and the .whl extension. It is designed to contain all the files for a PEP 376 compatible install in a way that is very close to the on-disk format
 https://pip.pypa.io/en/stable/reference/pip_wheel/
+
 
 ```python
 pip install wheel 

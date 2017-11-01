@@ -95,11 +95,11 @@ else:
 #   ************* C Py Speed Test *************
 #     C: Please Wait, Running CPrimes()........
 #     Number of primes between 2 and 100000 = 9592
-#     C() Time taken = 0:00:00.578126
+#     C() Time taken = 0:00:00.468738
 
 #     Py: Please Wait, Running PyPrimes()........
 #     Number of primes between 2 and 100000 = 9592
-#     Py() Time taken = 0:00:22.666514
+#     Py() Time taken = 0:00:22.577125
 
 # Good By!
 

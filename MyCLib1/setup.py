@@ -1,6 +1,9 @@
 import os
 import sys
 
+# https://stackoverflow.com/questions/26664102/why-can-i-not-create-a-wheel-in-python
+from setuptools import setup
+
 PACKAGE = 'MyCLib1'
 VERSION = '2.0.7'
 LICENSE = 'Apache License 2.0'
