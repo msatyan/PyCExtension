@@ -39,6 +39,9 @@ Following source of information may help you to creat python native extension.
 * [python extensions and embedding Python in C++ Apps](https://www.youtube.com/watch?v=bJq1n4gQFfw)
 * [Writing Safe C Extensions - PyCon 2016](https://www.youtube.com/watch?v=Yq__HtUIH5Y)
 * [Writing a C Python extension in 2017 PyCon 2017](https://www.youtube.com/watch?v=phe1s6p38gk)
+* [Writing Python 2-3 compatible code](http://python-future.org/compatible_idioms.html)
+
+* [Python Data Structures](http://thomas-cokelaer.info/tutorials/python/data_structures.html)
 
 #### Debug (so far all windows)
 * [Debugging Python and C++ together](https://docs.microsoft.com/en-us/visualstudio/python/debugging-mixed-mode)
