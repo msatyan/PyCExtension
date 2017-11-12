@@ -19,9 +19,17 @@ python setup.py bdist_wininst
 pip install wheel
 
 cd PyCExtension/MyCLib1
+
+# Wheel build
 python setup.py bdist_wheel
+
+# Install
+# pip install  dist\MyCLib1-<package version>-cp36-cp36m-win_amd64.whl
+pip install  dist/MyCLib1-3.0.7-cp36-cp36m-win_amd64.whl
 ```
 
+
+### [Miscellaneous](Miscellaneous.md)
 
 
 ## Reference Links

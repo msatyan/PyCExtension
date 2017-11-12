@@ -5,7 +5,7 @@ import sys
 from setuptools import setup
 
 PACKAGE = 'MyCLib1'
-VERSION = '2.0.7'
+VERSION = '3.0.7'
 LICENSE = 'Apache License 2.0'
 
 py_home = os.environ['MY_PY_DIR']
