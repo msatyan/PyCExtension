@@ -70,6 +70,9 @@ Following source of information may help you to creat python native extension.
 * [How to submit a package to PyPI](http://peterdowns.com/posts/first-time-with-pypi.html)
 * [How to Host your Python Package on PyPI with GitHub](https://www.codementor.io/arpitbhayani/host-your-python-package-using-github-on-pypi-du107t7ku)
 * [Submitting a Python package with GitHub and PyPI](http://sherifsoliman.com/2016/09/30/Python-package-with-GitHub-PyPI/)
+* [Wheel: A built-package format for Python](https://pypi.python.org/pypi/wheel)
+* [Packaging Your Code](http://docs.python-guide.org/en/latest/shipping/packaging/)
+* [Sharing Your Labor of Love: PyPI Quick and Dirty](https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/)
 
 
 #### [Wheels](https://wheel.readthedocs.io/en/stable/)
