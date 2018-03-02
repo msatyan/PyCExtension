@@ -91,13 +91,13 @@ https://www.python.org/dev/peps/pep-0425/
 ```
 
 ### Distribution format
+By comparing the tags it supports with the tags listed by the distribution, an installer can make an educated decision about whether to download a particular built distribution without having to read its full metadata  
+  
+The wheel built package format includes these tags in its filenames, of the form   
+{distribution}-{version}(-{build tag})?-{python tag}-{abi tag}-{platform tag}.whl.   
+Other package formats may have their own conventions.  
+
 ```
-By comparing the tags it supports with the tags listed by the distribution, an installer can make an educated decision about whether to download a particular built distribution without having to read its full metadata
-
-The wheel built package format includes these tags in its filenames, of the form 
-{distribution}-{version}(-{build tag})?-{python tag}-{abi tag}-{platform tag}.whl. 
-Other package formats may have their own conventions.
-
 Overview
 The tag format is {python tag}-{abi tag}-{platform tag}
 
