@@ -75,11 +75,68 @@ Following source of information may help you to creat python native extension.
 * [Sharing Your Labor of Love: PyPI Quick and Dirty](https://hynek.me/articles/sharing-your-labor-of-love-pypi-quick-and-dirty/)
 
 
+## [Platform Wheels](https://packaging.python.org/tutorials/distributing-packages/#platform-wheels)
 #### [Wheels](https://wheel.readthedocs.io/en/stable/)
  The wheel is a ZIP-format archive with a specially formatted filename and the .whl extension. It is designed to contain all the files for a PEP 376 compatible install in a way that is very close to the on-disk format
 https://pip.pypa.io/en/stable/reference/pip_wheel/
 
+* [Platform Wheels](https://packaging.python.org/tutorials/distributing-packages/#platform-wheels)
+* [PEP 425 -- Compatibility Tags for Built Distributions](https://www.python.org/dev/peps/pep-0425/)
+* [PyPI - the Python Package Index](https://pypi.python.org/pypi?%3Aaction=home)
+```
+python setup.py bdist_wheel
 
+bdist_wheel will detect that the code is not pure Python, and build a wheel that’s named such that it’s only usable on the platform that it was built on. For details on the naming of wheel files, see PEP 425.
+https://www.python.org/dev/peps/pep-0425/
+```
+
+### Distribution format
+```
+By comparing the tags it supports with the tags listed by the distribution, an installer can make an educated decision about whether to download a particular built distribution without having to read its full metadata
+
+The wheel built package format includes these tags in its filenames, of the form 
+{distribution}-{version}(-{build tag})?-{python tag}-{abi tag}-{platform tag}.whl. 
+Other package formats may have their own conventions.
+
+Overview
+The tag format is {python tag}-{abi tag}-{platform tag}
+
+python tag
+‘py27’, ‘cp33’
+abi tag
+‘cp32dmu’, ‘none’
+platform tag
+‘linux_x86_64’, ‘any’
+For example, the tag py27-none-any indicates compatible with Python 2.7 (any Python 2.7 implementation) with no abi requirement, on any platform.
+```
+
+#### Python Tag
+```
+The Python tag indicates the implementation and version required by a distribution. Major implementations have abbreviated codes, initially:
+
+py: Generic Python (does not require implementation-specific features)
+cp: CPython
+ip: IronPython
+pp: PyPy
+jy: Jython
+```
+
+#### ABI Tag
+```
+The ABI tag indicates which Python ABI is required by any included extension modules. For implementation-specific ABIs, the implementation is abbreviated in the same way as the Python Tag, e.g. cp33d would be the CPython 3.3 ABI with debugging.
+
+The CPython stable ABI is abi3 as in the shared library suffix.
+```
+
+#### Platform Tag
+```
+The platform tag is simply distutils.util.get_platform() with all hyphens - and periods . replaced with underscore
+win32
+linux_i386
+linux_x86_64
+```
+
+#### Setup
 ```python
 pip install wheel 
 pip install twine 
