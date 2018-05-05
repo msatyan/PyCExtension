@@ -14,7 +14,12 @@ cd PyCExtension/MyCLib1
 python setup.py bdist_wininst
 ```
 
-#### Wheels
+#### [Wheels](https://pythonwheels.com/)
+- [wheel](https://pypi.org/project/wheel/)
+- [wheel documentation](https://wheel.readthedocs.io/en/stable/)
+- [The file format](https://www.python.org/dev/peps/pep-0427/)
+- [The reference implementation](https://github.com/pypa/wheel)
+
 ```bash
 pip install wheel
 
@@ -26,6 +31,13 @@ python setup.py bdist_wheel
 # Install
 # pip install  dist\MyCLib1-<package version>-cp36-cp36m-win_amd64.whl
 pip install  dist/MyCLib1-3.0.7-cp36-cp36m-win_amd64.whl
+
+# upload to PyPi
+twine upload dist/*
+
+# To check status of the upload
+# https://pypi.org/project/<sampleproject>
+https://pypi.org/project/MyCLib1
 ```
 
 
@@ -86,7 +98,9 @@ https://pip.pypa.io/en/stable/reference/pip_wheel/
 ```
 python setup.py bdist_wheel
 
-bdist_wheel will detect that the code is not pure Python, and build a wheel that’s named such that it’s only usable on the platform that it was built on. For details on the naming of wheel files, see PEP 425.
+bdist_wheel will detect that the code is not pure Python, and build a 
+wheel that’s named such that it’s only usable on the platform that it was built on. 
+For details on the naming of wheel files, see PEP 425.
 https://www.python.org/dev/peps/pep-0425/
 ```
 
