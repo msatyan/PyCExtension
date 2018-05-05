@@ -1,6 +1,13 @@
 ## [PyCExtension](https://msatyan.github.io/PyCExtension/)
 This is a sample Python package to demonstrate how to extent functionality of CPython by using C language routines. The Python provides flexibility, at the same time it is inherently slow. The C language extensions can act as a turbocharger for Python modules where it needs speed and efficiency.  
 
+#### Prerequisite
+- Python
+- setuptools
+- pip
+- wheel
+
+
 ##### build
 ```bash
 cd PyCExtension/MyCLib1
@@ -19,6 +26,8 @@ python setup.py bdist_wininst
 - [wheel documentation](https://wheel.readthedocs.io/en/stable/)
 - [The file format](https://www.python.org/dev/peps/pep-0427/)
 - [The reference implementation](https://github.com/pypa/wheel)
+- [Py2: Writing the Setup Script](https://docs.python.org/2.7/distutils/setupscript.html)
+- [Py3: Writing the Setup Script](https://docs.python.org/3/distutils/setupscript.html)
 
 ```bash
 pip install wheel
@@ -40,6 +49,14 @@ twine upload dist/*
 https://pypi.org/project/MyCLib1
 ```
 
+### un/install the package 
+```bash
+# to uninstall 
+pip uninstall MyCLib1
+
+# to install
+pip install MyCLib1
+```
 
 ### [Miscellaneous](Miscellaneous.md)
 
