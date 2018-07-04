@@ -79,6 +79,8 @@ Following source of information may help you to creat python native extension.
 * [Writing Python 2-3 compatible code](http://python-future.org/compatible_idioms.html)
 
 * [Python Data Structures](http://thomas-cokelaer.info/tutorials/python/data_structures.html)
+* [Parsing arguments](https://docs.python.org/3/c-api/arg.html)
+
 
 #### Debug (so far all windows)
 * [Debugging Python and C++ together](https://docs.microsoft.com/en-us/visualstudio/python/debugging-mixed-mode)
