@@ -34,12 +34,17 @@ pip install wheel
 
 cd PyCExtension/MyCLib1
 
+# Set MY_PY_DIR ENV to your python installation, eg:
+SET MY_PY_DIR=C:\Dev\Anaconda3
+
 # Wheel build
 python setup.py bdist_wheel
 
 # Install
-# pip install  dist\MyCLib1-<package version>-cp36-cp36m-win_amd64.whl
-pip install  dist/MyCLib1-3.0.7-cp36-cp36m-win_amd64.whl
+# if you are on Python 3.7.4, then 
+# pip install  dist\MyCLib1-<package version>-cp37-cp37m-win_amd64.whl
+pip install  dist/MyCLib1-3.0.7-cp37-cp37m-win_amd64.whl
+
 
 # upload to PyPi
 twine upload dist/*
