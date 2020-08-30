@@ -17,7 +17,7 @@ module1 = Extension('MyCLib1',
                     include_dirs = [ py_home,  py_home + '/Include'],
                     sources = ['MyCLib1Src.c'])
 
-setup (name    = PACKAGE, 
+setup (name    = PACKAGE,
        version = VERSION,
        license = LICENSE,
        description = 'This is my MyCLib1 Extension',
